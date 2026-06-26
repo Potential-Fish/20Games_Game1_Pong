@@ -32,11 +32,11 @@ public class ball : MonoBehaviour
         {
             if (transform.position.x < 6f)
             {
-                targetPos = new Vector2(0, UnityEngine.Random.Range(0.2f, 12f) / 2);
+                targetPos = new Vector2(0, UnityEngine.Random.Range(1f, 10f) / 2);
             }
             if (transform.position.x > 6f)
             {
-                targetPos = new Vector2(12, UnityEngine.Random.Range(0.2f, 12f) / 2 + 6);
+                targetPos = new Vector2(12, UnityEngine.Random.Range(1f, 10f) / 2 + 6);
             }
         }
         else if (collider.tag == "Wall")
@@ -44,33 +44,33 @@ public class ball : MonoBehaviour
 
             if (transform.position.x < 6f)
             {
-                targetPos = new Vector2(0, UnityEngine.Random.Range(0.2f, 12f) / 2 + 6);
+                targetPos = new Vector2(0, UnityEngine.Random.Range(0.2f, 10f) / 2 );
             }
             if (transform.position.x > 6f)
             {
-                targetPos = new Vector2(12, UnityEngine.Random.Range(0.2f, 12f) / 2 + 6);
+                targetPos = new Vector2(12, UnityEngine.Random.Range(0.2f, 10f) / 2 + 6);
             }
         }
         else if (collider.tag == "Player")
         {
             if (transform.position.y < 5)
             {
-                targetPos = new Vector2(UnityEngine.Random.Range(6, 12), 10f);
+                targetPos = new Vector2(UnityEngine.Random.Range(7f, 12f), 10f);
             }
             if (transform.position.y > 5)
             {
-                targetPos = new Vector2(UnityEngine.Random.Range(6, 12), 0f);
+                targetPos = new Vector2(UnityEngine.Random.Range(7f, 12f), 0f);
             }
         }
         else if (collider.tag == "wallbounce")
         {
             if (transform.position.y < 5)
             {
-                targetPos = new Vector2(UnityEngine.Random.Range(0, 6), 10f);
+                targetPos = new Vector2(UnityEngine.Random.Range(1f, 6f), 10f);
             }
             if (transform.position.y > 5)
             {
-                targetPos = new Vector2(UnityEngine.Random.Range(0, 6), 0f);
+                targetPos = new Vector2(UnityEngine.Random.Range(1f, 6f), 0f);
             }
         }
     }

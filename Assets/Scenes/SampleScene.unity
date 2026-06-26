@@ -496,7 +496,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.035974026}
+  m_Offset: {x: -0.0036942735, y: 0.8971417}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -506,7 +506,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.40043354}
+  m_Size: {x: 0.13852803, y: 2.3280807}
   m_EdgeRadius: 0
 --- !u!4 &507984992
 Transform:
@@ -1023,7 +1023,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2, y: 2.9617, z: 0}
-  m_LocalScale: {x: 1.0305, y: 13.6271, z: 1}
+  m_LocalScale: {x: 1, y: 14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1066,6 +1066,7 @@ GameObject:
   - component: {fileID: 1171018742}
   - component: {fileID: 1171018741}
   - component: {fileID: 1171018740}
+  - component: {fileID: 1171018743}
   m_Layer: 0
   m_Name: WallBounce
   m_TagString: wallbounce
@@ -1167,7 +1168,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.059956685}
+  m_Offset: {x: 0.010633014, y: 0.0017822236}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -1177,7 +1178,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.406804}
+  m_Size: {x: 0.34072304, y: 0.1507006}
   m_EdgeRadius: 0
 --- !u!4 &1171018742
 Transform:
@@ -1187,13 +1188,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171018739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 12, y: -0.21, z: 0}
-  m_LocalScale: {x: 250.7, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12, y: 5.3917, z: 0}
+  m_LocalScale: {x: 1, y: 14, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1171018743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171018739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2169a35871c38ee4aa50cf55fa8ff886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  ball: {fileID: 648140454}
 --- !u!1 &1325908998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,7 +1321,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.009383082}
+  m_Offset: {x: 0.016108032, y: -0.79445946}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -1317,7 +1331,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.30565476}
+  m_Size: {x: 0.11193057, y: 1.9632812}
   m_EdgeRadius: 0
 --- !u!4 &1325909001
 Transform:
