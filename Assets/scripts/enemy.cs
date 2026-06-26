@@ -13,9 +13,12 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
-        float target_pos = ball.transform.position.y;
-        pos.y = Mathf.Lerp(transform.position.y, target_pos, Time.deltaTime * 1);
-        transform.position = pos;
+        if (ball != null)
+        {
+            Vector3 pos = transform.position;
+            float target_pos = ball.transform.position.y;
+            pos.y = Mathf.Lerp(transform.position.y, target_pos, Time.deltaTime * 1);
+            transform.position = pos;
+        }
     }
 }

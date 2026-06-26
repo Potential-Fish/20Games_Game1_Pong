@@ -1,8 +1,10 @@
 using UnityEngine;
 using System;
 using Unity.VisualScripting;
-public class ball : MonoBehaviour
+public class BAAL : MonoBehaviour
+
 {
+    public Component script;
     [SerializeField] int ball_speed = 3;
     private Rigidbody2D rb;
     BoxCollider2D col;
@@ -20,15 +22,15 @@ public class ball : MonoBehaviour
       targetPos = new Vector2(randvectorX, randvectorY * 10);
 
     }
-    public void Update()
+    public void FixedUpdate()
     {
         float step = ball_speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, targetPos,step );
+       
+        rb.MovePosition(Vector3.MoveTowards(transform.position,targetPos,step));
     }
-    public void OnTriggerEnter2D(Collider2D collider)
+    public void OnCollisionEnter2D(Collision2D collider)
     {
-
-        if (collider.tag == "WallDown")
+        if (collider.gameObject.CompareTag("WallDown"))
         {
             if (transform.position.x < 6f)
             {
@@ -36,10 +38,10 @@ public class ball : MonoBehaviour
             }
             if (transform.position.x > 6f)
             {
-                targetPos = new Vector2(12, UnityEngine.Random.Range(1f, 10f) / 2 + 6);
+                targetPos = new Vector2(12, UnityEngine.Random.Range(1f, 10f) / 2 + 5);
             }
         }
-        else if (collider.tag == "Wall")
+        else if (collider.gameObject.CompareTag("Wall"))
         {
 
             if (transform.position.x < 6f)
@@ -48,10 +50,10 @@ public class ball : MonoBehaviour
             }
             if (transform.position.x > 6f)
             {
-                targetPos = new Vector2(12, UnityEngine.Random.Range(0.2f, 10f) / 2 + 6);
+                targetPos = new Vector2(12, UnityEngine.Random.Range(0.2f, 10f) / 2 + 5);
             }
         }
-        else if (collider.tag == "Player")
+        else if (collider.gameObject.CompareTag("Player"))
         {
             if (transform.position.y < 5)
             {
@@ -62,7 +64,7 @@ public class ball : MonoBehaviour
                 targetPos = new Vector2(UnityEngine.Random.Range(7f, 12f), 0f);
             }
         }
-        else if (collider.tag == "wallbounce")
+        else if (collider.gameObject.CompareTag("wallbounce"))
         {
             if (transform.position.y < 5)
             {
